@@ -6,6 +6,8 @@ int main();
 
 bool menu();
 
+void ruffini();
+
 int ejercicio1();
 
 int ejercicio2();
@@ -35,7 +37,7 @@ bool menu(){
 	if(opcion==1){
 
 	}else if(opcion==2){
-		
+		ruffini();
 	}else if(opcion==3){
 
 	}else if(opcion==4){
@@ -44,6 +46,13 @@ bool menu(){
 		cout<<"Numero Invalido";
 	}//if y elses
 }//menu
+
+void ruffini(){
+	cout<<"Ingrese el grado mas alto del polinomio: ";
+	int grado;
+	cin>>grado+1;
+	int*** matriz=crearMatriz(grado);
+}//ruffini
 
 int*** crearMatriz(int size){
 	int*** matriz = new int**[size];
