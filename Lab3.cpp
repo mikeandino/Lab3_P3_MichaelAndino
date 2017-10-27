@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <stdlib.h>
 using namespace std;
 
 int main();
@@ -35,12 +36,13 @@ bool menu(){
 	if(opcion==1){
 
 	}else if(opcion==2){
-		ruffini();
+		ruffini()
 	}else if(opcion==3){
 
 	}else if(opcion==4){
 		return false;
 	}else{
+
 		cout<<"Numero Invalido";
 	}//if y elses
 }//menu
@@ -79,8 +81,31 @@ void limpiarMatriz(int*** matriz, int size){
 }//LimpiarMatriz
 
 void fecha(){
-	
+	cout<<"Ingrese una cadena: ";
+	string fechas;
+	cin>>fechas;
+	vector <string> dates;
+	string ano="";
+	string mes="";
+	string dia="";
+	ano+=fechas.at(0);
+	ano+=fechas.at(1);
+	ano+=fechas.at(2);
+	ano+=fechas.at(3);
+	mes+=fechas.at(4);
+	mes+=fechas.at(5);	
+	dia+=fechas.at(6);
+	dia+=fechas.at(7);
+	int ano2 (c.str(ano));
+	int mes2 (c.str(mes));
+	int	dia2 (c.str(dia));
+
+
 }//fecha
+//ano = año
+//vector.push_back(yada yada);
+//vector.remove(int);
+//vector.insert(int, yada yada);
 
 void imprimirMatriz(int*** matriz, int size){
 
