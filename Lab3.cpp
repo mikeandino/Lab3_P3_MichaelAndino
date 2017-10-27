@@ -52,6 +52,10 @@ void ruffini(){
 	int grado;
 	cin>>grado+1;
 	int*** matriz=crearMatriz(grado);
+	int a;
+	cout<<"Ingrese a: ";
+	cin>>a;
+
 }//ruffini
 
 int*** crearMatriz(int size){
@@ -66,6 +70,18 @@ int*** crearMatriz(int size){
 	}//for
 	return matriz;
 }//crearMatriz
+
+void limpiarMatriz(int*** matriz, int size){
+	for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){			
+			matriz[i][j]=NULL;
+			delete [] matriz[i];
+		}//for j
+		matriz[i]=NULL;
+	}//for i
+	matriz=NULL;
+	delete matriz;
+}//LimpiarMatriz
 
 void imprimirMatriz(int*** matriz, int size){
 
