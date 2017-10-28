@@ -146,8 +146,8 @@ void imprimirMatriz(int*** matrix,int size,int a){
 
 void fechas(){
 	int bandera=0;
-	vector <string> dates;
 	do{
+		vector <string> dates;			
 		cout<<"1.Agregar Fecha"<<endl
 		    <<"2.Listar Todo"<<endl
 			<<"3.Listar Ordenado"<<endl
@@ -161,40 +161,11 @@ void fechas(){
 			while(fecha.size()!=8){
 				cout<<"Formato no valido: ";
 				cin>>fecha;
-			}//while
-			int ano = atoi((fecha.substr(0,2)).c_str());
-			int ano2 = atoi((fecha.substr(2,2)).c_str());
-			int mes = atoi((fecha.substr(4,2)).c_str());
-			int	dia = atoi((fecha.substr(6,2)).c_str());
-			if(mes<0&&mes>13){
-				if(dia<0&&dia>32){
-					if((mes == 2 || mes == 4 ||mes == 6 || mes == 9 || mes == 11)&& dia==31){
-						cout<<"La fecha ingresada no existe."<<endl;
-					}else{
-						if(mes==2){
-							if(ano2%4){
-								if(dia<30){
-					
-								}else{
-									cout<<"La fecha ingresada no existe."<<endl;
-								}//if dia febrero possible
-							}else{
-								if(dia<29){
-							
-								}else{
-									cout<<"La fecha ingresada no existe."<<endl;
-								}//if dia febrero possible
-							}//if año bisiestro
-						}else{
-							
-						}//if febrero
-					}//if dia del mes possible
-				}else{
-					cout<<"La fecha ingresada no existe,"<<endl;
-				}//if dia possible
-			}else{
-				cout<<"La fecha ingresada no existe."<<endl;
-			}//if mes possible
+			}
+			int ano = atoi((fecha.substr(0,1)).c_str());
+			int ano2 = atoi((fecha.substr(2,3)).c_str());
+			int mes = atoi((fecha.substr(4,5)).c_str());
+			int	dia = atoi((fecha.substr(6,7)).c_str());
 		}else if(bandera==2){
 		
 		}else if(bandera==3){
@@ -202,12 +173,15 @@ void fechas(){
 		}else if(bandera==4){
 		
 		}else{
-			cout<<"Opcion no valida."<<endl;
+
 		}//if elses
 	}while(bandera!=4);
 }//fecha
 //ano = año
+//vector.push_back(yada yada);
+//vector.remove(int);
+//vector.insert(int, yada yada);
 
 string calculofecha(int ano, int ano2,int mes, int dia){
 	return "";
-}//calculofechas
+}
