@@ -36,7 +36,7 @@ bool menu(){
 	if(opcion==1){
 
 	}else if(opcion==2){
-		ruffini()
+		ruffini();
 	}else if(opcion==3){
 
 	}else if(opcion==4){
@@ -61,10 +61,13 @@ void ruffini(){
 			matriz[i][j]=new int[grado+1];
 		}//for j
 	}//for i
+
 	int a;
 	cout<<"Ingrese a: ";
 	cin>>a;
+	for(int i=0;i<10;i++){
 	
+	}
 }//ruffini
 
 void limpiarMatriz(int*** matriz, int size){
@@ -96,9 +99,9 @@ void fecha(){
 	mes+=fechas.at(5);	
 	dia+=fechas.at(6);
 	dia+=fechas.at(7);
-	int ano2 (c.str(ano));
-	int mes2 (c.str(mes));
-	int	dia2 (c.str(dia));
+	int ano2 = atoi(ano.c_str());
+	int mes2 = atoi(mes.c_str());
+	int	dia2 = atoi(dia.c_str());
 
 
 }//fecha
